@@ -4,7 +4,6 @@ os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
 from llama_index.core import VectorStoreIndex, SimpleDirectoryReader
 from llama_index.core.prompts import PromptTemplate
 
-load_dotenv()
 
 st.title("🍷 Wine Assistant")
 st.caption("Ask me anything about wine")
