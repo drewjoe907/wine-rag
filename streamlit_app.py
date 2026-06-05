@@ -1,6 +1,6 @@
 import streamlit as st
 import os
-os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
+os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KY"]
 from llama_index.core import VectorStoreIndex, SimpleDirectoryReader
 from llama_index.core.prompts import PromptTemplate
 
