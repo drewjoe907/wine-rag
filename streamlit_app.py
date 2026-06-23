@@ -7,6 +7,9 @@ from llama_index.core.prompts import PromptTemplate
 
 st.title("🍷 Wine Assistant")
 st.caption("Ask me anything about wine")
+st.markdown("""<style>
+[data-testid="stBaseButton-headerNoPadding"] {display: none;}
+</style>""", unsafe_allow_html=True)
 
 @st.cache_resource
 def load_index():
@@ -28,7 +31,7 @@ qa_prompt = PromptTemplate(
     "- Never repeat yourself\n"
     "- Be warm, specific, and concise\n"
     "- Keep responses to 3-4 sentences maximum. Leave them wanting more.\n"
-    "- If asked anything unrelated to wine, politely redirect back to wine\n"
+    "- You are knowledgeable about all beverages including wine, spirits, cocktails, beer, coffee, tea, and soft drinks. Answer questions about any beverage with the same warmth and expertise.\n"
     "- Always respond in the same language the user writes in.\n"
     "Style examples: {context_str}\n"
     "Question: {query_str}\n"
