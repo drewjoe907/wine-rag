@@ -8,7 +8,10 @@ from llama_index.core.prompts import PromptTemplate
 st.title("🍷 Wine Assistant")
 st.caption("Ask me anything about wine")
 st.markdown("""<style>
-[data-testid="stBaseButton-headerNoPadding"] {display: none;}
+[data-testid="stToolbar"] {display: none;}
+[data-testid="stDecoration"] {display: none;}
+header [data-testid="stBaseButton-headerNoPadding"] {display: none;}
+button[kind="headerNoPadding"] {display: none;}
 </style>""", unsafe_allow_html=True)
 
 @st.cache_resource
